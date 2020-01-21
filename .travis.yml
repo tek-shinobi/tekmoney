@@ -1,0 +1,16 @@
+language: python
+python:
+  - 3.6
+  - 3.8
+install:
+  - pip install pipenv
+  - pipenv install
+  - python setup.py install
+  - pip install mypy pytest pytest-cov flake8
+  - pip install codecov
+script:
+  - flake8 tekmoney
+  - pytest --cov
+  - mypy tekmoney --ignore-missing-imports
+after_success:
+  - codecov
