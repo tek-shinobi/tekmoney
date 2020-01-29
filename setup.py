@@ -1,10 +1,15 @@
-from distutils.core import setup
+from setuptools import setup
+
+with open('README.md', 'r') as f:
+    long_description = f.read()
 setup(
     name='tekmoney',         # How you named your package folder (MyLib)
     packages=['tekmoney'],   # Chose the same as "name"
     version='1.0',      # Start with a small number and increase it with every change you make
     license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description='Handles money',   # Give a short description about your library
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='tek shinobi',                   # Type in your name
     author_email='hello@gmail.com',      # Type in your E-Mail
     url='https://github.com/tek-shinobi/tekmoney',   # Provide either the link to your github or to your website
@@ -20,7 +25,6 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: MIT License',   # Again, pick a license
         'Programming Language :: Python :: 3',      # Specify which python versions that you want to support
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.8',
         'Operating System :: OS Independent',
     ]
