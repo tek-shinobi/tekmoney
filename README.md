@@ -1,5 +1,6 @@
 # tekmoney
 [![Build Status](https://travis-ci.org/tek-shinobi/tekmoney.svg?branch=master)](https://travis-ci.org/tek-shinobi/tekmoney)
+[![PyPI version](https://badge.fury.io/py/tekmoney.svg)](https://badge.fury.io/py/tekmoney)
 
 Tek money. Handles money.
 
