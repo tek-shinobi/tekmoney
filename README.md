@@ -1,4 +1,5 @@
 # tekmoney
+[![Build Status](https://travis-ci.org/tek-shinobi/tekmoney.svg?branch=master)](https://travis-ci.org/tek-shinobi/tekmoney)
 Tek money. Handles money.
 
 - Handles mathematical and comparison operations on product prices
