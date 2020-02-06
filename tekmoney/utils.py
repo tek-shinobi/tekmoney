@@ -2,7 +2,7 @@ import functools
 import operator
 from typing import Iterable, TypeVar
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 def tek_sum(values: Iterable[T]) -> T:

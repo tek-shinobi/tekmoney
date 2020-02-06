@@ -11,19 +11,15 @@ Dint = Union[Decimal, int]
 
 @overload
 def flat_tax(
-        base: Union[Currency, CurrencyWithTax],
-        tax_rate: Decimal,
-        *,
-        keep_gross) -> CurrencyWithTax:
+    base: Union[Currency, CurrencyWithTax], tax_rate: Decimal, *, keep_gross
+) -> CurrencyWithTax:
     ...  # pragma: no cover
 
 
 @overload
 def flat_tax(
-        base: Union[CurrencyRange, CurrencyRangeTax],
-        tax_rate: Decimal,
-        *,
-        keep_gross) -> CurrencyRangeTax:
+    base: Union[CurrencyRange, CurrencyRangeTax], tax_rate: Decimal, *, keep_gross
+) -> CurrencyRangeTax:
     ...  # pragma: no cover
 
 
@@ -34,7 +30,8 @@ def flat_tax(base, tax_rate, *, keep_gross=False):
     if isinstance(base, (CurrencyRange, CurrencyRangeTax)):
         return CurrencyRangeTax(
             flat_tax(base.start, tax_rate, keep_gross=keep_gross),
-            flat_tax(base.stop, tax_rate, keep_gross=keep_gross))
+            flat_tax(base.stop, tax_rate, keep_gross=keep_gross),
+        )
     if isinstance(base, CurrencyWithTax):
         if keep_gross:
             new_net = (base.net / fraction).quantize()
@@ -49,4 +46,4 @@ def flat_tax(base, tax_rate, *, keep_gross=False):
         else:
             gross = (base * fraction).quantize()
             return CurrencyWithTax(net=base, gross=gross)
-    raise TypeError('Unknown base for flat_tax: %r' % (base,))
+    raise TypeError("Unknown base for flat_tax: %r" % (base,))

@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/tek-shinobi/tekmoney.svg?branch=master)](https://travis-ci.org/tek-shinobi/tekmoney)
 [![PyPI version](https://badge.fury.io/py/tekmoney.svg)](https://badge.fury.io/py/tekmoney)
 [![codecov](https://codecov.io/gh/tek-shinobi/tekmoney/branch/master/graph/badge.svg)](https://codecov.io/gh/tek-shinobi/tekmoney)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Tek money. Handles money.
 
